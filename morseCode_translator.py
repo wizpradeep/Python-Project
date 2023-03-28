@@ -1,3 +1,4 @@
+# Morse code translator...
 hello = input(" \n\n\nEnter text-->")
 
 morse_code = {

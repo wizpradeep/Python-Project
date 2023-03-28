@@ -1,3 +1,6 @@
+# Try it , It help in conducting indoor games like: Cards, etc efficiently..
+
+
 def game():
     while True:
         player_number = int(input("\n\nEnter number of players (2-5)..\n-->"))
@@ -150,11 +153,6 @@ def game():
 
         won = input("\nWho won ? \n-->")
 
-        # if won == "1" or won == "2" or won == "3" or won == "4" or won == "5":
-        #     round += 1
-        # else:
-        #     round = round
-
         if won:
             for ro in players:
                 if won in ro:
@@ -174,22 +172,29 @@ def game():
             s_p_4 += 1
         elif won == "5":
             s_p_5 += 1
-        elif won == "q":
+        elif won == "q" or won == "Q":
             break
 
-    def greater_five(a, b, c, d, e):
-        if a > b and a > c and a > d and a > e:
-            return f"\nCongratulations {players[0]} !!.. You won the game."
-        elif b > a and b > c and b > d and b > e:
-            return f"\nCongratulations {players[1]} !!.. You won the game."
-        elif c > a and c > b and c > d and c > e:
-            return f"\nCongratulations {players[2]} !!.. You won the game."
-        elif d > a and d > b and d > c and d > e:
-            return f"\nCongratulations {players[3]} !!.. You won the game."
-        elif e > a and e > b and e > c and e > d:
-            return f"\nCongratulations {players[4]} !!.. You won the game."
-
-    print(greater_five(s_p_1, s_p_2, s_p_3, s_p_4, s_p_5))
+    if s_p_1 > s_p_2 and s_p_1 > s_p_3 and s_p_1 > s_p_4 and s_p_1 > s_p_5:
+        print(
+            f"\nCongratulations {players[0]} !!.. You won the game by scoring {s_p_1}. "
+        )
+    elif s_p_2 > s_p_1 and s_p_2 > s_p_3 and s_p_2 > s_p_4 and s_p_2 > s_p_5:
+        print(
+            f"\nCongratulations {players[1]} !!.. You won the game by scoring {s_p_2}."
+        )
+    elif s_p_3 > s_p_1 and s_p_3 > s_p_2 and s_p_3 > s_p_4 and s_p_3 > s_p_5:
+        print(
+            f"\nCongratulations {players[2]} !!.. You won the game by scoring {s_p_3}."
+        )
+    elif s_p_4 > s_p_1 and s_p_4 > s_p_2 and s_p_4 > s_p_3 and s_p_4 > s_p_5:
+        print(
+            f"\nCongratulations {players[3]} !!.. You won the game by scoring {s_p_4}."
+        )
+    elif s_p_5 > s_p_1 and s_p_5 > s_p_2 and s_p_5 > s_p_3 and s_p_5 > s_p_4:
+        print(
+            f"\nCongratulations {players[4]} !!.. You won the game by scoring {s_p_5}."
+        )
 
 
 game()

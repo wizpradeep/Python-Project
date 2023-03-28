@@ -1,3 +1,5 @@
+# Here questions are based on mathematics and question are generated automatic....
+
 import random
 
 print(
